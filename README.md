@@ -1,2 +1,1 @@
-# ilooklikemilk.github.io
-looking like milk
+go to https://ilooklikemilk.github.io/index.html for the page
