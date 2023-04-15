@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/profile.jpg">
+  <title>milk.psd</title>
+  <meta name="keywords" content="image host, sexy, private">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="milk.psd is a high-quality, private image host with many features">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div id="cover-i"></div>
+  <div class="image">
+    <img src="images/profile.jpg" alt="Profile" id="logo"><br>
+<br>
+    <div id="links">
+      <a href="/about.html">about me</a> <span>/</span> <a href="/art.html">art </a><span>/</span> <a href="/about.html">socials</a> <span>/</span> <a id="darkmodeswitch">dark mode</a>
+    </div>
+  </div>
+  <script src="intro.js"></script> 
+  <script>
+
+
+  var element = document.body;
+  if (localStorage.getItem("darkmodeprefsenabled") == null) {localStorage.setItem("darkmodeprefsenabled", false);}
+  if (localStorage.getItem("darkmodeprefsenabled") == "true") {
+    var button=document.getElementById("darkmodeswitch");
+    element.classList.toggle("darkmode");
+    button.innerHTML = "light mode";
+  }
+  var button=document.getElementById("darkmodeswitch");
+  button.onclick = function() {
+    var element = document.body;
+    if (localStorage.getItem("darkmodeprefsenabled") == "true") {
+        button.innerHTML = "dark mode";
+        element.classList.toggle("darkmode");
+        localStorage.setItem("darkmodeprefsenabled", false);
+    } else if (localStorage.getItem("darkmodeprefsenabled") == "false") {
+        button.innerHTML = "light mode";
+        element.classList.toggle("darkmode");
+        localStorage.setItem("darkmodeprefsenabled", true);
+    }
+  };
+  </script>
+</body>
+</html>
