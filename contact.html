@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="images/profile.jpg">
+  <title>Contact - milk.psd</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="milk.psd is a portfolio with artwork by anna sidorenko">
+  <link rel="stylesheet" href="art.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div id="cover-i"></div>
+  <div class="image">
+    <img src="images/profile.jpg" alt="Profile" id="logo"><br>
+    <div id="links">
+      <p> You can contact me on my socials or email me @ anna20030102@gmail.com if you have any questions or want to commission me!</p>
+ 
+
+      <br>
+
+    </div>
+
+<a href= "https://www.instagram.com/milk.psd/"target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+    <a href= "https://twitter.com/ilooklikemilk"target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+<a href= "https://github.com/ilooklikemilk"target="_blank"><img src="images/github.png" alt="github"></a>
+   </footer>
+  </div>
+  <script src="intro.js"></script> 
+  <script>
+
+
+  var element = document.body;
+  if (localStorage.getItem("darkmodeprefsenabled") == null) {localStorage.setItem("darkmodeprefsenabled", false);}
+  if (localStorage.getItem("darkmodeprefsenabled") == "true") {
+    var button=document.getElementById("darkmodeswitch");
+    element.classList.toggle("darkmode");
+    button.innerHTML = "light";
+  }
+  var button=document.getElementById("darkmodeswitch");
+  button.onclick = function() {
+    var element = document.body;
+    if (localStorage.getItem("darkmodeprefsenabled") == "true") {
+        button.innerHTML = "dark mode";
+        element.classList.toggle("darkmode");
+        localStorage.setItem("darkmodeprefsenabled", false);
+    } else if (localStorage.getItem("darkmodeprefsenabled") == "false") {
+        button.innerHTML = "light mode";
+        element.classList.toggle("darkmode");
+        localStorage.setItem("darkmodeprefsenabled", true);
+    }
+  };
+  </script>
+  
+  </script>
+</body>
+</html>
